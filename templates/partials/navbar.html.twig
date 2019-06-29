@@ -1,37 +1,41 @@
 {% spaceless %}
 {% macro loop(page) %}
-    {% for p in page.children.visible %}
-        {% set current_page = (p.active or p.activeChild) ? 'active' : '' %}
+  {% for p in page.children.visible %}
+    {% set current_page = (p.active or p.activeChild) ? 'active' : '' %}
+    {% if p.children.visible.count > 0 %}
+      <li class="dropdown m-menu-fw {{ current_page }}">
+        <a href="#" data-toggle="dropdown" class="dropdown-toggle">{{ p.menu }}
+          <span><i class="fa fa-angle-down"></i></span>
+        </a>
         {% if p.children.visible.count > 0 %}
-            <li class="dropdown m-menu-fw {{ current_page }}">
-                <a href="#" data-toggle="dropdown" class="dropdown-toggle">{{ p.menu }}
-                <span><i class="fa fa-angle-down"></i></span></a>
-
-                    {% if p.children.visible.count > 0 %}
-                    <ul class="dropdown-menu">
-                    {% for dropdownHeader in p.children.visible %}
-                        <li class="m-menu-content">
-                            <ul class="col-sm-{{ (12 / p.children.visible.count)|round }}">
-                            {% if dropdownHeader.children.visible.count > 0 %}
-                            <li class="dropdown-header">{{ dropdownHeader.menu }}</li>
-                            {% for dropdownItem in dropdownHeader.children.visible %}
-                            <li>
-                                <a href="{{ dropdownItem.url }}">{{ dropdownItem.menu }}</a>
-                            </li>
-                            {% endfor %}
-                            {% endif %}
-                            </ul>
-                        </li>
-                    {% endfor %}
-                    </ul>
-                    {% endif %}
-            </li>
-        {% else %}
-            <li class="{{ current_page }}">
-                <a href="{{ p.url }}">{{ p.menu }}</a>
-            </li>
+        <ul class="dropdown-menu">
+          {% for dropdownHeader in p.children.visible %}
+          <li class="m-menu-content">
+            <ul class="col-sm-{{ (12 / p.children.visible.count)|round }}">
+              {% if dropdownHeader.children.visible.count > 0 %}
+              <li class="dropdown-header">{{ dropdownHeader.menu }}</li>
+              {% for dropdownItem in dropdownHeader.children.visible %}
+              <li>
+                  <a href="{{ dropdownItem.url }}">{{ dropdownItem.menu }}</a>
+              </li>
+              {% endfor %}
+              {% else %}
+              <li>
+                  <a href="{{ dropdownHeader.url }}">{{ dropdownHeader.menu }}</a>
+              </li>
+              {% endif %}
+            </ul>
+          </li>
+          {% endfor %}
+        </ul>
         {% endif %}
-    {% endfor %}
+      </li>
+    {% else %}
+      <li class="{{ current_page }}">
+        <a href="{{ p.url }}">{{ p.menu }}</a>
+      </li>
+    {% endif %}
+  {% endfor %}
 {% endmacro %}
 {% endspaceless %}
 
