@@ -1,7 +1,5 @@
 # X-Corporation theme for Grav CMS
 
-![X-Corporation Theme screenshot](screenshot.jpg)
-
 X-Corporation theme is a port of [X-Corporation](https://uicookies.com/demo/#x_corporation) by [uiCookies](https://uicookies.com/).
 
 ## Demo
@@ -61,70 +59,6 @@ Once this is done, you should be able to see the new theme on the frontend. Keep
 ## Configuration with Admin plugin
 
 If you have [Admin plugin](https://github.com/getgrav/grav-plugin-admin) installed, you can fully manage the sub-pages (modular pages) via Admin plugin.
-
-### About sub-page
-
-![](screenshot_about.jpg)
-
-About content is shown as columns, you can add as many columns as you like.
-
-### Carousel
-
-![](screenshot_carousel.jpg)
-
-Carousel is used in home page. Each slide has heading, description, background image and description of background image. Background image is file name of an image in the same folder.
-
-### Clients
-
-![](screenshot_clients.jpg)
-
-Client has name, image and website. Image is a file in the same folder of sub-page.
-
-### Features
-
-![](screenshot_features.jpg)
-
-Feature has title, icon and description. Icon is a class of Font Awesome icon, for example "fa-line-chart".
-
-### Map
-
-![](screenshot_map.jpg)
-
-Map sub-page is used to show Google map. You need to provide location's coordinates, zoom level of the map, Google Maps API key. If you want to use a custom marker, you put marker image in the same and enter its file name into "Marker Image" field.
-
-### Services
-
-![](screenshot_services.jpg)
-
-Service has title, description, URL and image. Image is an image file in sub-page's folder.
-
-### Skills
-
-![](screenshot_skills.jpg)
-
-Skill has name and a percentage value (0 - 100).
-
-### Solutions
-
-![](screenshot_solutions.jpg)
-
-Solution sub-page has 3 parts:
-
-* **Solutions**: Each solution has title, description and Font Awesome icon.
-* **How We Work**: You can customize the heading "How We Work", each reason has title and description.
-* **Why Choose Our Services**: Similar to **How We Work**.
-
-### Team
-
-![](screenshot_team.jpg)
-
-Team member has name, position, URL to member page and an image. Image is stored in the same folder.
-
-### Testimonials
-
-![](screenshot_team.jpg)
-
-Testimonial has client's name, client's image and testimonial's content. Image is stored in the same folder.
 
 ## Updating
 
