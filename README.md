@@ -2,9 +2,7 @@
 
 X-Corporation theme is a port of [X-Corporation](https://uicookies.com/demo/#x_corporation) by [uiCookies](https://uicookies.com/).
 
-## Demo
-
-A demo of this theme is available at [grav-theme-x-corporation.flatfiledeveloper.com](https://grav-theme-x-corporation.flatfiledeveloper.com/)
+Modified and updated by [Aljaxus](https://github.com/aljaxus) for [Webonize](https://webonize.net)
 
 ## Features
 
@@ -17,7 +15,6 @@ A demo of this theme is available at [grav-theme-x-corporation.flatfiledeveloper
 * Modern browser compatible
 * Infinitely and extensively customizable
 * Sleek interaction and smooth scrolling
-* Usage Of Latest Technology: HTML5, CSS3, JavaScript, Bootstrap 3 framework, Font Awesome, retina ready,
 
 ## Installation
 
