@@ -59,16 +59,6 @@ If you have [Admin plugin](https://github.com/getgrav/grav-plugin-admin) install
 
 ## Updating
 
-### GPM Update (Preferred)
-
-The simplest way to update this theme is via the [Grav Package Manager (GPM)](http://learn.getgrav.org/advanced/grav-gpm). You can do this with this by navigating to the root directory of your Grav install using your system's Terminal (also called command line) and typing the following:
-
-    bin/gpm update x-corporation
-
-This command will check your Grav install to see if your Gateway theme is due for an update. If a newer release is found, you will be asked whether or not you wish to update. To continue, type `y` and hit enter. The theme will automatically update and clear Grav's cache.
-
-### Manual Update
-
 Manually updating X-Corporation is pretty simple. Here is what you will need to do to get this done:
 
 * Delete the `your/site/user/themes/x-corporation` directory.
