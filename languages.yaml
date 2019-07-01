@@ -72,6 +72,9 @@ en:
                 TITLE:
                     LABEL: Title
                     HELP: Feature's title.
+                IMAGE:
+                    LABEL: Image
+                    HELP: Feature's side image.
             GOOGLE_MAPS:
                 LABEL: Google Maps
             LATITUDE:
