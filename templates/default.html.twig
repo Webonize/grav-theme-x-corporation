@@ -1,11 +1,24 @@
 {% extends 'partials/base.html.twig' %}
 
 {% block content %}
-<section class="single-page-title">
+<section class="single-page-title x-backgroundimage-020619">
     <div class="container text-center">
         <h2>{{ page.title }}</h2>
     </div>
 </section>
+{% if page.header.backgroundimage != '' %}
+<style>
+.x-backgroundimage-020619 {
+  background: url('{{ page.media.images[page.header.backgroundimage].url() }}') no-repeat bottom;
+  background-size: cover;
+  width: 100%;
+  background-attachment: fixed;
+  padding: 15% 0 5%;
+  position: relative;
+}
+</style>
+{% endif %}
+
 
 <section class="ptb-100">
     <div class="container">
