@@ -19,13 +19,15 @@
                         {{ page.media.images[member.image].html('', member.name) }}
                     </a>
                     <figcaption class="caption text-center">
-                        <h3>{{ member.name }} -
-                            <small>{{ member.position}}</small>
-                            {% if member.curriculum != '' %}
-                            <small>
-                             - <a href="{{ page.media[member.curriculum].url() }}" target="_blank">Curriculum</a>
-                            </small>
-                            {% endif %}
+                        <h3>
+                          {{ member.name }}
+                          {% if member.curriculum != '' %}
+                          <small>
+                            - <a href="{{ page.media[member.curriculum].url() }}" target="_blank">Curriculum</a>
+                          </small>
+                          {% endif %}
+                          <br>
+                          <small>{{ member.position}}</small>
                         </h3>
                     </figcaption>
                 </figure>
