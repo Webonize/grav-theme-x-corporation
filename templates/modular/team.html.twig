@@ -1,8 +1,10 @@
 <section class="team ptb-100">
     <section class="section-title">
         <div class="container text-center">
-            <h2>{{ page.title }}</h2>
-            <span class="bordered-icon"><i class="fa fa-circle-thin"></i></span>
+          {% if page.header.showtitle != false %}
+          <h2>{{ page.title }}</h2>
+          {% endif %}
+          <span class="bordered-icon"><i class="fa fa-circle-thin"></i></span>
         </div>
     </section>
     <div class="container">
@@ -13,12 +15,17 @@
         {% endif %}
             <div class="col-md-4">
                 <figure class="thumbnail">
-                    <a href="{{ member.url }}">
+                    <a href="{{ member.url != '' ? member.url : 'javascript:void(0)' }}">
                         {{ page.media.images[member.image].html('', member.name) }}
                     </a>
                     <figcaption class="caption text-center">
                         <h3>{{ member.name }} -
                             <small>{{ member.position}}</small>
+                            {% if member.curriculum != '' %}
+                            <small>
+                             - <a href="{{ page.media[member.curriculum].url() }}" target="_blank">Curriculum</a>
+                            </small>
+                            {% endif %}
                         </h3>
                     </figcaption>
                 </figure>

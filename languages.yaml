@@ -167,6 +167,12 @@ en:
         IMAGE:
           LABEL: Image
           HELP: Member's image.
+        CURRICULUM:
+          LABEL: Curriculum
+          HELP: Employees curriculum vitae
+        SHOW_TITLE:
+          LABEL: Show title
+          HELP: Toggle the "Team" title visibility
       TESTIMONIALS:
         LABEL: Testimonials
         NAME:
